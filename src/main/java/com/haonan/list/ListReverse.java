@@ -6,6 +6,9 @@ package com.haonan.list;
  */
 public class ListReverse {
 
+    /**
+     * 方法一：遍历列表节点依次插入头节点之后
+     */
     private static Node reverse(Node head) {
         if (head == null || head.getNext() == null) {
             return head;
@@ -26,6 +29,48 @@ public class ListReverse {
         pNode.getNext().setNext(null);
         return head;
     }
+
+    /**
+     * 方法二：遍历列表依次反转指针指向
+     */
+    private static Node reverse2(Node head) {
+        if (head == null || head.getNext() == null) {
+            return head;
+        }
+
+        Node rNode;
+        Node pnode = head;
+        Node qnode = pnode.getNext();
+        while (qnode != null) {
+            rNode = qnode.getNext();
+
+            //反转pnode和qnode指向
+            qnode.setNext(pnode);
+            if (pnode == head) {
+                pnode.setNext(null);
+            }
+
+            pnode = qnode;
+            qnode = rNode;
+        }
+
+        return pnode;
+    }
+
+    /**
+     * 方法三：递归反转
+     */
+    private static Node reverseRecursive(Node head) {
+        if (head == null || head.getNext() == null) {
+            return head;
+        }
+
+        Node newHead = reverseRecursive(head.getNext());
+        head.getNext().setNext(head);
+        head.setNext(null);
+        return newHead;
+    }
+
 
     private static class Node {
         private int value;
@@ -71,6 +116,10 @@ public class ListReverse {
         Node head = createNodeList(10);
         printList(head);
         head = reverse(head);
+        printList(head);
+        head = reverse2(head);
+        printList(head);
+        head = reverseRecursive(head);
         printList(head);
     }
 }
