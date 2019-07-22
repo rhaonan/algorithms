@@ -6,7 +6,7 @@ package com.haonan.list;
  * @Description 两数相加
  * leetcode:2
  */
-public class addTwoNumber {
+public class AddTwoNumber {
 
     public static class ListNode {
         int val;
