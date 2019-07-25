@@ -3,7 +3,7 @@ package com.haonan.list;
 /**
  * @Author rhaonan
  * @Data 2019/7/19
- * @Description 合并K个排序链表
+ * @Description leetcode 23 合并K个排序链表
  */
 public class MergeKList {
 
