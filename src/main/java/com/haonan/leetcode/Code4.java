@@ -8,7 +8,7 @@ package com.haonan.leetcode;
 public class Code4 {
 
     public String longestPalindrome(String s) {
-
+        return "";
     }
 
     public static void main(String[] args) {
