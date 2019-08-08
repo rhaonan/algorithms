@@ -11,10 +11,10 @@ public class Code7 {
         int ans = 0;
         while (x != 0) {
             int pop = x % 10;
-            if (ans * 10 > Integer.MAX_VALUE || (ans * 10 == Integer.MAX_VALUE && pop > 7)) {
+            if (ans > Integer.MAX_VALUE/10 || (ans == Integer.MAX_VALUE/10 && pop > 7)) {
                 return 0;
             }
-            if (ans * 10 < Integer.MIN_VALUE || (ans * 10 == Integer.MIN_VALUE && pop < -8)) {
+            if (ans < Integer.MIN_VALUE/10 || (ans == Integer.MIN_VALUE/10 && pop < -8)) {
                 return 0;
             }
             ans = ans * 10 + pop;
@@ -24,6 +24,6 @@ public class Code7 {
     }
 
     public static void main(String[] args) {
-        System.out.println(reverse(123));
+        System.out.println(reverse(1534236469));
     }
 }
