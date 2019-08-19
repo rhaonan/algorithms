@@ -5,7 +5,7 @@ package com.haonan.leetcode;
  * @Data 2019/8/2
  * @Description 最长回文子串
  */
-public class Code4 {
+public class Code5 {
 
     /**
      * 暴力法

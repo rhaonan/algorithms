@@ -1,11 +1,11 @@
-package com.haonan.list;
+package com.haonan.leetcode;
 
 /**
  * @Author rhaonan
  * @Data 2019/7/19
  * @Description leetcode 23 合并K个排序链表
  */
-public class MergeKList {
+public class Code23 {
 
     /**
      * 分治法加递归

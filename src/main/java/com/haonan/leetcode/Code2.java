@@ -1,4 +1,4 @@
-package com.haonan.list;
+package com.haonan.leetcode;
 
 /**
  * @Author rhaonan
@@ -6,7 +6,7 @@ package com.haonan.list;
  * @Description 两数相加
  * leetcode:2
  */
-public class AddTwoNumber {
+public class Code2 {
 
     public static class ListNode {
         int val;

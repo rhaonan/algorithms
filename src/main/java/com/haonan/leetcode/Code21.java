@@ -1,11 +1,11 @@
-package com.haonan.list;
+package com.haonan.leetcode;
 
 /**
  * @Author rhaonan
  * @Data 2019/7/25
  * @Description leetcode 21 合并两个有序链表
  */
-public class MergeTwoList {
+public class Code21 {
 
     public class ListNode {
         int val;
