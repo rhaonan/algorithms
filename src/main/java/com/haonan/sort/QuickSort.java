@@ -24,19 +24,21 @@ public class QuickSort {
     }
 
     private static int partition(int[] arrary, int low, int high) {
-        int flag = arrary[high];
-        int i, j = low;
-        for (i = j - 1; j < high; j++) {
-            if (arrary[j] <= flag) {
-                i++;
-                swap(arrary, i, j);
+        int flag = arrary[low];
+        int i = low;
+        int j = high;
+        while (i < j) {
+            while (arrary[j] >= flag & i < j) {
+                j--;
             }
+            while (arrary[i] <= flag & i < j) {
+                i++;
+            }
+            swap(arrary, i, j);
         }
-        if (i + 1 != high) {
-            swap(arrary, i+1, high);
-        }
-
-        return i+1;
+        arrary[low] = arrary[i];
+        arrary[i] = flag;
+        return i;
     }
 
     private static void swap(int[] arrary, int i, int j) {
@@ -48,7 +50,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arrary = {5, 12, 42, 25, 36};
+        int[] arrary = {2, 7, 1, 5, 6, 3, 4};
         quickSort(arrary);
         System.out.println(Arrays.toString(arrary));
     }
