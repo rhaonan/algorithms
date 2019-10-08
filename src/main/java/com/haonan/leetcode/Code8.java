@@ -25,7 +25,7 @@ public class Code8 {
         }
 
         for (j = i; j < len; j++) {
-            if (str.charAt(j) < '0' && str.charAt(j) > '9') {
+            if (str.charAt(j) < '0' || str.charAt(j) > '9') {
                 break;
             }
         }
@@ -40,7 +40,7 @@ public class Code8 {
                 }
                 res = res * 10 - cur;
             } else {
-                if (res > Integer.MAX_VALUE/10 || res == Integer.MAX_VALUE && cur > 7 ) {
+                if (res > Integer.MAX_VALUE/10 || res == Integer.MAX_VALUE/10 && cur > 7 ) {
                     return Integer.MAX_VALUE;
                 }
                 res = res * 10 + cur;
@@ -50,7 +50,7 @@ public class Code8 {
     }
 
     public static void main(String[] args) {
-        String str = " -12456";
+        String str = "2147483648";
         System.out.println(myAtoi(str));
     }
 }
