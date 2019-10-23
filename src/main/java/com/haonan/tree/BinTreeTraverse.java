@@ -1,6 +1,7 @@
 package com.haonan.tree;
 
 import java.util.LinkedList;
+import java.util.Stack;
 
 /**
  * @Author rhaonan
@@ -43,7 +44,7 @@ public class BinTreeTraverse {
     }
 
     /**
-     * 层次遍历
+     * 层次遍历-广度优先搜索
      */
     private static void levelTraverse(Tree root) {
         if (root == null) {
@@ -59,6 +60,27 @@ public class BinTreeTraverse {
             }
             if (node.getRight() != null) {
                 queue.offer(node.getRight());
+            }
+        }
+    }
+
+    /**
+     * 深度优先搜索 遍历
+     */
+    private static void depthSearch(Tree root) {
+        if (root == null) {
+            return;
+        }
+        Stack<Tree> stack = new Stack<>();
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            Tree node = stack.pop();
+            System.out.println(node.value);
+            if (node.left != null) {
+                stack.add(node.left);
+            }
+            if (node.right != null) {
+                stack.add(node.right);
             }
         }
     }
@@ -131,6 +153,8 @@ public class BinTreeTraverse {
         inOrderTraverse(root);
         System.out.println("------");
         postOrderTraverse(root);
+        System.out.println("------");
+        depthSearch(root);
     }
 
 }
