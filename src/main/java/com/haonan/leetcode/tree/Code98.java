@@ -29,4 +29,30 @@ public class Code98 {
         return true;
     }
 
+    // 递归判断上界和下界，不能近判断孩子节点，否则只是局部二叉搜索树
+    public boolean isValidBST2(TreeNode root) {
+        return helper(root, null, null);
+    }
+
+    private boolean helper(TreeNode root, Integer lower, Integer upper) {
+        if (root == null) {
+            return true;
+        }
+
+        if (lower != null && root.val <= lower) {
+            return false;
+        }
+        if (upper != null && root.val >= upper) {
+            return false;
+        }
+
+        if(!helper(root.right, root.val, upper)) {
+            return false;
+        }
+        if (!helper(root.left, lower, root.val)) {
+            return false;
+        }
+        return true;
+    }
+
 }
