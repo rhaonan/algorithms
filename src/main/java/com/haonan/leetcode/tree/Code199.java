@@ -1,4 +1,4 @@
-package com.haonan.leetcode;
+package com.haonan.leetcode.tree;
 
 import java.util.*;
 
@@ -8,13 +8,6 @@ import java.util.*;
  * @Description leetcode199 树的右视图
  */
 public class Code199 {
-
-     public class TreeNode {
-         int val;
-         TreeNode left;
-         TreeNode right;
-         TreeNode(int x) { val = x; }
-     }
 
     public List<Integer> rightSideView(TreeNode root) {
         if (root == null) {
