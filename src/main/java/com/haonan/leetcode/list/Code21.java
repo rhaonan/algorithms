@@ -1,4 +1,4 @@
-package com.haonan.leetcode;
+package com.haonan.leetcode.list;
 
 /**
  * @Author rhaonan
@@ -6,12 +6,6 @@ package com.haonan.leetcode;
  * @Description leetcode 21 合并两个有序链表
  */
 public class Code21 {
-
-    public class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0);

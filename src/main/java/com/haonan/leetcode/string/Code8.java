@@ -1,4 +1,4 @@
-package com.haonan.leetcode;
+package com.haonan.leetcode.string;
 
 /**
  * @Author rhaonan

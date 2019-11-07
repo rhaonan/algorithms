@@ -1,4 +1,4 @@
-package com.haonan.leetcode;
+package com.haonan.leetcode.list;
 
 /**
  * @Author rhaonan
@@ -7,14 +7,6 @@ package com.haonan.leetcode;
  * leetcode:2
  */
 public class Code2 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-        }
-    }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0);
