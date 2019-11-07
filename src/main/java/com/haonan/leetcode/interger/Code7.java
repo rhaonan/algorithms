@@ -1,4 +1,4 @@
-package com.haonan.leetcode.string;
+package com.haonan.leetcode.interger;
 
 /**
  * @Author rhaonan
